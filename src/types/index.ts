@@ -15,3 +15,10 @@ export interface Opportunity {
   amount?: number;
   accountName: string;
 };
+
+export interface LeadDetailPanelProps {
+  lead: Lead | null;
+  onClose: () => void;
+  onSave: (lead: Lead) => void;
+  onConvert: (lead: Lead) => void;
+};
