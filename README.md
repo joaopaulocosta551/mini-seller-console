@@ -1,69 +1,126 @@
-# React + TypeScript + Vite
+# Mini Seller Console
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight CRM application for managing sales leads and opportunities built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+![Mini Seller Console Screenshot](https://via.placeholder.com/800x450.png?text=Mini+Seller+Console+Screenshot)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Lead Management**: View, filter, and update sales leads
+- **Opportunity Tracking**: Convert qualified leads into opportunities
+- **Responsive Design**: Works on desktop and mobile devices
+- **Interactive UI**: Modern user interface with real-time updates
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 19**: Front-end library for building user interfaces
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Vite**: Next generation frontend tooling
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/mini-seller-console.git
+cd mini-seller-console
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
 ```
+
+3. Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Project Structure
+
+```
+mini-seller-console/
+├── src/
+│   ├── assets/          # Static assets
+│   ├── components/
+│   │   ├── layout/      # Layout components
+│   │   └── ui/          # UI components
+│   ├── data/            # Mock data
+│   ├── hooks/           # Custom React hooks
+│   ├── types/           # TypeScript type definitions
+│   ├── utils/           # Utility functions
+│   ├── App.tsx          # Main App component
+│   └── main.tsx         # Application entry point
+├── public/              # Public assets
+├── index.html           # HTML template
+├── tailwind.config.js   # Tailwind configuration
+└── vite.config.ts       # Vite configuration
+```
+
+## Usage
+
+### Managing Leads
+
+- **View Leads**: All leads are displayed in the main leads table
+- **Filter Leads**: Use the search box to filter by name or company
+- **Filter by Status**: Select a status to filter leads
+- **Edit Lead**: Click on any lead to open the edit panel
+- **Update Status**: Change lead status between New, Contacted, and Qualified
+
+### Converting to Opportunities
+
+- Click on a lead to open the details panel
+- Click the "Convert to Opportunity" button to move the lead to opportunities
+
+## Build for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+This will create an optimized build in the `dist` directory.
+
+## Deployment
+
+The application can be deployed to any static hosting service:
+
+```bash
+# Example using serve package
+npm install -g serve
+serve -s dist
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- React team for the amazing library
+- Tailwind CSS for the utility-first approach
+- Vite team for the lightning-fast build tool
