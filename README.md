@@ -17,6 +17,8 @@ A lightweight CRM application for managing sales leads and opportunities built w
 - **TypeScript**: Type-safe JavaScript
 - **Tailwind CSS**: Utility-first CSS framework
 - **Vite**: Next generation frontend tooling
+- **Jest**: JavaScript testing framework
+- **React Testing Library**: Testing utilities for React components
 
 ## Getting Started
 
@@ -104,6 +106,45 @@ The application can be deployed to any static hosting service:
 npm install -g serve
 serve -s dist
 ```
+
+## Testing
+
+The project uses Jest and React Testing Library for testing components, hooks, and utilities.
+
+### Running Tests
+
+```bash
+# Run all tests once
+npm test
+
+# Run tests in watch mode (for development)
+npm run test:watch
+
+# Generate test coverage report
+npm run test:coverage
+```
+
+### Test Structure
+
+```
+src/
+└── __tests__/
+    ├── components/      # Tests for React components
+    └── hooks/           # Tests for custom hooks
+```
+
+### Testing Strategy
+
+- **Component Tests**: Verify rendering, user interactions, and state changes
+- **Hook Tests**: Check custom hook behavior, state management, and side effects
+- **Unit Tests**: Validate utility functions and data transformations
+
+Current test coverage includes:
+- UI component tests for the leads table displaying various states
+- Hook tests for the filtering and search functionality
+- Integration tests for lead data processing
+
+When contributing, please ensure all tests pass and add tests for new features.
 
 ## Contributing
 
