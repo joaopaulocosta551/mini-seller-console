@@ -42,7 +42,7 @@ export const LeadsTable: React.FC<LeadsTableProps> = ({
             <tr 
               key={lead.id} 
               onClick={() => onLeadSelect(lead)}
-              className="border-b border-slate-200 hover:bg-slate-50 cursor-pointer"
+              className="border-b border-slate-200 hover:bg-blue-50 hover:shadow-sm transition-all duration-200 cursor-pointer"
             >
               <td className="p-3 font-medium">{lead.name}</td>
               <td className="p-3 hidden sm:table-cell text-slate-600">{lead.company}</td>

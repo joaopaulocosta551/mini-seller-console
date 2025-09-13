@@ -35,7 +35,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-slate-100 min-h-screen font-sans text-slate-800">
+    <div className="bg-slate-500 min-h-screen font-sans text-slate-800">
       <Header />
 
       <main className="container mx-auto p-4 sm:p-6 lg:p-8">
